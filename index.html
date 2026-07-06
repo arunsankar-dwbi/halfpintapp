@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HalfPint — Privacy Policy</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: #f9f9f7;
+    color: #1a1a18;
+    line-height: 1.7;
+    font-size: 16px;
+  }
+
+  header {
+    background: #1a1a18;
+    padding: 24px 0;
+  }
+
+  header .inner {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  header .logo {
+    font-size: 24px;
+    font-weight: 800;
+    color: #ffffff;
+    letter-spacing: -0.5px;
+  }
+
+  header .logo span {
+    color: #EF9F27;
+  }
+
+  header .tagline {
+    font-size: 13px;
+    color: rgba(255,255,255,0.5);
+    margin-left: auto;
+  }
+
+  .container {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 48px 24px 80px;
+  }
+
+  .page-title {
+    font-size: 32px;
+    font-weight: 800;
+    color: #1a1a18;
+    margin-bottom: 8px;
+    letter-spacing: -0.5px;
+  }
+
+  .last-updated {
+    font-size: 13px;
+    color: #888780;
+    margin-bottom: 48px;
+  }
+
+  .pint-note {
+    background: #FFF4DE;
+    border-left: 4px solid #EF9F27;
+    border-radius: 0 12px 12px 0;
+    padding: 20px 24px;
+    margin-bottom: 48px;
+  }
+
+  .pint-note .pint-label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #EF9F27;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+  }
+
+  .pint-note p {
+    font-size: 15px;
+    color: #1a1a18;
+    font-style: italic;
+    line-height: 1.6;
+  }
+
+  section {
+    margin-bottom: 40px;
+  }
+
+  h2 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1a1a18;
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #e5e5e0;
+  }
+
+  p {
+    font-size: 15px;
+    color: #3d3d3a;
+    margin-bottom: 16px;
+    line-height: 1.7;
+  }
+
+  ul {
+    margin: 0 0 16px 0;
+    padding-left: 20px;
+  }
+
+  ul li {
+    font-size: 15px;
+    color: #3d3d3a;
+    margin-bottom: 8px;
+    line-height: 1.6;
+  }
+
+  .highlight-box {
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 16px;
+  }
+
+  .highlight-box p {
+    margin: 0;
+    color: #166534;
+    font-weight: 500;
+  }
+
+  .data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 16px;
+    font-size: 14px;
+  }
+
+  .data-table th {
+    text-align: left;
+    padding: 10px 16px;
+    background: #f1f0eb;
+    color: #1a1a18;
+    font-weight: 600;
+    font-size: 13px;
+  }
+
+  .data-table th:first-child {
+    border-radius: 8px 0 0 0;
+  }
+
+  .data-table th:last-child {
+    border-radius: 0 8px 0 0;
+  }
+
+  .data-table td {
+    padding: 10px 16px;
+    border-bottom: 1px solid #e5e5e0;
+    color: #3d3d3a;
+    vertical-align: top;
+  }
+
+  .data-table tr:last-child td {
+    border-bottom: none;
+  }
+
+  .badge {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+  }
+
+  .badge-green {
+    background: #dcfce7;
+    color: #166534;
+  }
+
+  .badge-amber {
+    background: #fef9c3;
+    color: #854d0e;
+  }
+
+  .contact-card {
+    background: #ffffff;
+    border: 1px solid #e5e5e0;
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 16px;
+  }
+
+  .contact-card .name {
+    font-size: 16px;
+    font-weight: 700;
+    color: #1a1a18;
+    margin-bottom: 4px;
+  }
+
+  .contact-card .role {
+    font-size: 13px;
+    color: #888780;
+    margin-bottom: 16px;
+  }
+
+  .contact-card a {
+    color: #1D9E75;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  .contact-card a:hover {
+    text-decoration: underline;
+  }
+
+  .rights-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+
+  .right-item {
+    background: #ffffff;
+    border: 1px solid #e5e5e0;
+    border-radius: 10px;
+    padding: 16px;
+  }
+
+  .right-item .right-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: #1a1a18;
+    margin-bottom: 6px;
+  }
+
+  .right-item .right-desc {
+    font-size: 13px;
+    color: #888780;
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  footer {
+    background: #1a1a18;
+    padding: 32px 24px;
+    text-align: center;
+  }
+
+  footer .footer-logo {
+    font-size: 18px;
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 8px;
+  }
+
+  footer .footer-logo span {
+    color: #EF9F27;
+  }
+
+  footer p {
+    font-size: 13px;
+    color: rgba(255,255,255,0.4);
+    margin: 0;
+  }
+
+  @media (max-width: 480px) {
+    .page-title { font-size: 26px; }
+    .rights-grid { grid-template-columns: 1fr; }
+    .data-table { font-size: 13px; }
+    .data-table td, .data-table th { padding: 8px 12px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="inner">
+    <div class="logo">Half<span>Pint</span></div>
+    <div class="tagline">by Grain</div>
+  </div>
+</header>
+
+<div class="container">
+
+  <h1 class="page-title">Privacy Policy</h1>
+  <p class="last-updated">Last updated: July 2026</p>
+
+  <div class="pint-note">
+    <div class="pint-label">🍺 Pint says</div>
+    <p>"We built HalfPint to help you drink less and gain more. Your data helps us do that — nothing else. We don't sell it, we don't show ads, and we never will. That's not a legal formality. It's how we're built."</p>
+  </div>
+
+  <section>
+    <h2>Who we are</h2>
+    <p>HalfPint is a drinking moderation app built by Arun Sankar, trading as Grain ("we", "us", "our"). HalfPint helps you track your drinking habits, understand your patterns, and cut back — on your own terms.</p>
+    <p>You can reach us at: <a href="mailto:arunsankar.apps@gmail.com" style="color:#1D9E75;font-weight:500;">arunsankar.apps@gmail.com</a></p>
+  </section>
+
+  <section>
+    <h2>What we collect</h2>
+    <p>We only collect what we need to make HalfPint work for you.</p>
+
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Data</th>
+          <th>Why we collect it</th>
+          <th>Stored where</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Email address</strong></td>
+          <td>Account creation and sign-in</td>
+          <td><span class="badge badge-amber">Supabase (secure)</span></td>
+        </tr>
+        <tr>
+          <td><strong>Tab name</strong></td>
+          <td>Personalising Pint's voice</td>
+          <td><span class="badge badge-amber">Supabase (secure)</span></td>
+        </tr>
+        <tr>
+          <td><strong>Drink logs</strong></td>
+          <td>Tracking your progress and calculating gains</td>
+          <td><span class="badge badge-amber">Supabase (secure)</span></td>
+        </tr>
+        <tr>
+          <td><strong>Mood logs</strong></td>
+          <td>Morning mood check-ins and pattern insights</td>
+          <td><span class="badge badge-amber">Supabase (secure)</span></td>
+        </tr>
+        <tr>
+          <td><strong>Drinking preferences</strong></td>
+          <td>Calculating savings and setting your goals</td>
+          <td><span class="badge badge-amber">Supabase (secure)</span></td>
+        </tr>
+        <tr>
+          <td><strong>Subscription status</strong></td>
+          <td>Managing your Pro or Premium access</td>
+          <td><span class="badge badge-amber">RevenueCat (secure)</span></td>
+        </tr>
+        <tr>
+          <td><strong>Local-only data</strong> <em>(no account users)</em></td>
+          <td>All the above, stored only on your device</td>
+          <td><span class="badge badge-green">Your device only</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>What we never do</h2>
+
+    <div class="highlight-box">
+      <p>✅ We never sell your data. We never show ads. We never share your drinking data with third parties. Ever.</p>
+    </div>
+
+    <ul>
+      <li>We do not sell your personal data to anyone</li>
+      <li>We do not show advertisements</li>
+      <li>We do not share your drinking habits with employers, insurers, or any third party</li>
+      <li>We do not use your data to build advertising profiles</li>
+      <li>We do not track you across other apps or websites</li>
+      <li>We do not use your location</li>
+      <li>We do not access your contacts, photos, or any other device data</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>How we use your data</h2>
+    <p>Your data is used exclusively to:</p>
+    <ul>
+      <li>Show you your drinking patterns, streaks, and savings</li>
+      <li>Personalise Pint's messages and insights</li>
+      <li>Calculate your money saved, calories saved, and life minutes gained</li>
+      <li>Send you optional push notifications (only if you enable them)</li>
+      <li>Process your subscription through Apple's App Store</li>
+      <li>Sync your data across your devices (account users only)</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Third-party services</h2>
+    <p>We use a small number of trusted services to run HalfPint:</p>
+
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Service</th>
+          <th>Purpose</th>
+          <th>Their privacy policy</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Supabase</strong></td>
+          <td>Secure database and authentication</td>
+          <td><a href="https://supabase.com/privacy" style="color:#1D9E75;">supabase.com/privacy</a></td>
+        </tr>
+        <tr>
+          <td><strong>RevenueCat</strong></td>
+          <td>Subscription and purchase management</td>
+          <td><a href="https://www.revenuecat.com/privacy" style="color:#1D9E75;">revenuecat.com/privacy</a></td>
+        </tr>
+        <tr>
+          <td><strong>Apple App Store</strong></td>
+          <td>App distribution and in-app purchases</td>
+          <td><a href="https://www.apple.com/legal/privacy/" style="color:#1D9E75;">apple.com/legal/privacy</a></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>None of these services receive your drinking data or mood data. They only receive what is strictly necessary to perform their function (e.g. RevenueCat receives your subscription status, not your drink logs).</p>
+  </section>
+
+  <section>
+    <h2>Your rights</h2>
+    <p>You have full control over your data.</p>
+
+    <div class="rights-grid">
+      <div class="right-item">
+        <div class="right-title">Access your data</div>
+        <p class="right-desc">Export all your data as a CSV from Settings → Privacy & Data → Export my data (Pro feature)</p>
+      </div>
+      <div class="right-item">
+        <div class="right-title">Delete your data</div>
+        <p class="right-desc">Delete your account and all associated data from Settings → Delete account. Permanent and immediate.</p>
+      </div>
+      <div class="right-item">
+        <div class="right-title">Correct your data</div>
+        <p class="right-desc">Edit your profile, preferences, and logged data directly within the app at any time.</p>
+      </div>
+      <div class="right-item">
+        <div class="right-title">Use without an account</div>
+        <p class="right-desc">Use HalfPint entirely locally — no account, no cloud storage. Your data never leaves your device.</p>
+      </div>
+      <div class="right-item">
+        <div class="right-title">Withdraw consent</div>
+        <p class="right-desc">Delete your account at any time. No questions asked. No retention period beyond what's legally required.</p>
+      </div>
+      <div class="right-item">
+        <div class="right-title">Data portability</div>
+        <p class="right-desc">Export your data in CSV format to take it wherever you like.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Data retention</h2>
+    <p>We keep your data for as long as your account is active. When you delete your account:</p>
+    <ul>
+      <li>All drink logs are permanently deleted immediately</li>
+      <li>Your profile is permanently deleted immediately</li>
+      <li>Your authentication record is permanently deleted immediately</li>
+      <li>Subscription records are retained by Apple and RevenueCat per their own policies (for legal and financial compliance)</li>
+    </ul>
+    <p>We do not retain your personal data after account deletion.</p>
+  </section>
+
+  <section>
+    <h2>Children</h2>
+    <p>HalfPint is a drinking moderation app intended for adults aged 18 and over (or the legal drinking age in your country, whichever is higher). We do not knowingly collect data from minors. If you believe a minor has created an account, please contact us and we will delete it immediately.</p>
+  </section>
+
+  <section>
+    <h2>Security</h2>
+    <p>Your data is stored securely using industry-standard encryption (HTTPS/TLS in transit, encrypted at rest via Supabase). We use Row Level Security (RLS) to ensure your data is only accessible to you. No HalfPint employee can read your drink logs or mood data.</p>
+  </section>
+
+  <section>
+    <h2>Changes to this policy</h2>
+    <p>If we make significant changes to this privacy policy, we will notify you via the app before the changes take effect. The "last updated" date at the top of this page will always reflect the most recent version.</p>
+    <p>Continuing to use HalfPint after changes take effect means you accept the updated policy.</p>
+  </section>
+
+  <section>
+    <h2>Contact and grievances</h2>
+    <p>For any privacy questions, data requests, or concerns:</p>
+
+    <div class="contact-card">
+      <div class="name">Arun Sankar</div>
+      <div class="role">Data Controller · HalfPint by Grain</div>
+      <a href="mailto:arunsankar.apps@gmail.com">arunsankar.apps@gmail.com</a>
+    </div>
+
+    <p style="margin-top:16px;">We aim to respond to all privacy requests within 30 days. For Indian users, this also serves as the Grievance Officer contact under the Digital Personal Data Protection Act 2023.</p>
+  </section>
+
+  <section>
+    <h2>Support</h2>
+    <p>For app support, feature requests, or bug reports, contact us at the same address: <a href="mailto:arunsankar.apps@gmail.com" style="color:#1D9E75;font-weight:500;">arunsankar.apps@gmail.com</a></p>
+    <p>We typically respond within 48 hours.</p>
+  </section>
+
+</div>
+
+<footer>
+  <div class="footer-logo">Half<span>Pint</span></div>
+  <p>Small changes. Wide ripples.</p>
+</footer>
+
+</body>
+</html>
