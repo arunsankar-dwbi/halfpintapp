@@ -3,509 +3,607 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>HalfPint — Privacy Policy</title>
+<meta name="description" content="HalfPint — Cut back. Don't quit. The drinking app that never judges you. Half October starts Oct 1.">
+<meta property="og:title" content="HalfPint — Cut back. Don't quit.">
+<meta property="og:description" content="The drinking app that never judges you. Half October starts Oct 1.">
+<meta property="og:image" content="https://gethalfpint.com/og.png">
+<title>HalfPint — Cut back. Don't quit.</title>
 <style>
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  
+  :root {
+    --dark: #1a1a18;
+    --green: #1D9E75;
+    --amber: #EF9F27;
+    --purple: #8B5CF6;
+    --cream: #FFF8F0;
+    --subtext: rgba(255,255,255,0.5);
+    --card: rgba(255,255,255,0.05);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
   body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    background: #f9f9f7;
-    color: #1a1a18;
-    line-height: 1.7;
-    font-size: 16px;
+    background: var(--dark);
+    color: #fff;
+    font-family: -apple-system, BlinkMacSystemFont,
+      'SF Pro Display', 'Segoe UI', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
   }
 
-  header {
-    background: #1a1a18;
-    padding: 24px 0;
-  }
-
-  header .inner {
-    max-width: 680px;
-    margin: 0 auto;
-    padding: 0 24px;
+  /* NAV */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    padding: 20px 40px;
     display: flex;
     align-items: center;
-    gap: 12px;
+    justify-content: space-between;
+    background: rgba(26,26,24,0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 0.5px solid rgba(255,255,255,0.06);
   }
 
-  header .logo {
-    font-size: 24px;
-    font-weight: 800;
-    color: #ffffff;
-    letter-spacing: -0.5px;
-  }
-
-  header .logo span {
-    color: #EF9F27;
-  }
-
-  header .tagline {
-    font-size: 13px;
-    color: rgba(255,255,255,0.5);
-    margin-left: auto;
-  }
-
-  .container {
-    max-width: 680px;
-    margin: 0 auto;
-    padding: 48px 24px 80px;
-  }
-
-  .page-title {
-    font-size: 32px;
-    font-weight: 800;
-    color: #1a1a18;
-    margin-bottom: 8px;
-    letter-spacing: -0.5px;
-  }
-
-  .last-updated {
-    font-size: 13px;
-    color: #888780;
-    margin-bottom: 48px;
-  }
-
-  .pint-note {
-    background: #FFF4DE;
-    border-left: 4px solid #EF9F27;
-    border-radius: 0 12px 12px 0;
-    padding: 20px 24px;
-    margin-bottom: 48px;
-  }
-
-  .pint-note .pint-label {
-    font-size: 12px;
-    font-weight: 700;
-    color: #EF9F27;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    margin-bottom: 8px;
-  }
-
-  .pint-note p {
-    font-size: 15px;
-    color: #1a1a18;
-    font-style: italic;
-    line-height: 1.6;
-  }
-
-  section {
-    margin-bottom: 40px;
-  }
-
-  h2 {
+  .wordmark {
     font-size: 20px;
-    font-weight: 700;
-    color: #1a1a18;
-    margin-bottom: 16px;
-    padding-bottom: 12px;
-    border-bottom: 1px solid #e5e5e0;
+    font-weight: 900;
+    letter-spacing: -0.5px;
   }
+  .wordmark .half { color: #fff; }
+  .wordmark .pint { color: var(--amber); }
 
-  p {
-    font-size: 15px;
-    color: #3d3d3a;
-    margin-bottom: 16px;
-    line-height: 1.7;
-  }
-
-  ul {
-    margin: 0 0 16px 0;
-    padding-left: 20px;
-  }
-
-  ul li {
-    font-size: 15px;
-    color: #3d3d3a;
-    margin-bottom: 8px;
-    line-height: 1.6;
-  }
-
-  .highlight-box {
-    background: #f0fdf4;
-    border: 1px solid #bbf7d0;
-    border-radius: 12px;
-    padding: 20px 24px;
-    margin-bottom: 16px;
-  }
-
-  .highlight-box p {
-    margin: 0;
-    color: #166534;
-    font-weight: 500;
-  }
-
-  .data-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 16px;
+  .nav-cta {
+    background: var(--green);
+    color: #fff;
     font-size: 14px;
-  }
-
-  .data-table th {
-    text-align: left;
-    padding: 10px 16px;
-    background: #f1f0eb;
-    color: #1a1a18;
-    font-weight: 600;
-    font-size: 13px;
-  }
-
-  .data-table th:first-child {
-    border-radius: 8px 0 0 0;
-  }
-
-  .data-table th:last-child {
-    border-radius: 0 8px 0 0;
-  }
-
-  .data-table td {
-    padding: 10px 16px;
-    border-bottom: 1px solid #e5e5e0;
-    color: #3d3d3a;
-    vertical-align: top;
-  }
-
-  .data-table tr:last-child td {
-    border-bottom: none;
-  }
-
-  .badge {
-    display: inline-block;
-    padding: 2px 8px;
-    border-radius: 20px;
-    font-size: 12px;
-    font-weight: 600;
-  }
-
-  .badge-green {
-    background: #dcfce7;
-    color: #166534;
-  }
-
-  .badge-amber {
-    background: #fef9c3;
-    color: #854d0e;
-  }
-
-  .contact-card {
-    background: #ffffff;
-    border: 1px solid #e5e5e0;
-    border-radius: 12px;
-    padding: 24px;
-    margin-top: 16px;
-  }
-
-  .contact-card .name {
-    font-size: 16px;
     font-weight: 700;
-    color: #1a1a18;
-    margin-bottom: 4px;
-  }
-
-  .contact-card .role {
-    font-size: 13px;
-    color: #888780;
-    margin-bottom: 16px;
-  }
-
-  .contact-card a {
-    color: #1D9E75;
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: 500;
-  }
-
-  .contact-card a:hover {
-    text-decoration: underline;
-  }
-
-  .rights-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 12px;
-    margin-bottom: 16px;
-  }
-
-  .right-item {
-    background: #ffffff;
-    border: 1px solid #e5e5e0;
+    padding: 10px 20px;
     border-radius: 10px;
-    padding: 16px;
+    text-decoration: none;
+    transition: opacity 0.2s;
+  }
+  .nav-cta:hover { opacity: 0.85; }
+
+  /* HERO */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 120px 24px 80px;
+    position: relative;
+    overflow: hidden;
   }
 
-  .right-item .right-title {
-    font-size: 14px;
+  /* Ripple bg */
+  .hero-ripple {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+  }
+
+  .hero-icon {
+    width: 96px;
+    height: 96px;
+    border-radius: 22px;
+    margin-bottom: 28px;
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 20px 60px rgba(29,158,117,0.3);
+  }
+
+  .hero-eyebrow {
+    font-size: 12px;
     font-weight: 700;
-    color: #1a1a18;
-    margin-bottom: 6px;
+    letter-spacing: 0.12em;
+    color: var(--amber);
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    position: relative;
+    z-index: 2;
   }
 
-  .right-item .right-desc {
-    font-size: 13px;
-    color: #888780;
-    line-height: 1.5;
-    margin: 0;
+  .hero-title {
+    font-size: clamp(42px, 8vw, 80px);
+    font-weight: 900;
+    letter-spacing: -2px;
+    line-height: 1.0;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 2;
   }
 
-  footer {
-    background: #1a1a18;
-    padding: 32px 24px;
+  .hero-title .accent { color: var(--green); }
+
+  .hero-sub {
+    font-size: clamp(16px, 2.5vw, 20px);
+    color: var(--subtext);
+    line-height: 1.6;
+    max-width: 480px;
+    margin-bottom: 40px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+  }
+
+  .btn-primary {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #fff;
+    color: var(--dark);
+    font-size: 15px;
+    font-weight: 700;
+    padding: 14px 24px;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(255,255,255,0.15);
+  }
+
+  .btn-secondary {
+    font-size: 14px;
+    color: var(--subtext);
+    text-decoration: none;
+    padding: 14px 8px;
+    transition: color 0.2s;
+  }
+  .btn-secondary:hover { color: #fff; }
+
+  /* HALF OCTOBER BANNER */
+  .half-october {
+    background: linear-gradient(135deg,
+      rgba(239,159,39,0.12),
+      rgba(29,158,117,0.12));
+    border: 1px solid rgba(239,159,39,0.2);
+    border-radius: 16px;
+    padding: 20px 28px;
+    margin: 60px auto;
+    max-width: 600px;
     text-align: center;
   }
 
-  footer .footer-logo {
-    font-size: 18px;
-    font-weight: 800;
-    color: #ffffff;
+  .half-october-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: var(--amber);
     margin-bottom: 8px;
   }
 
-  footer .footer-logo span {
-    color: #EF9F27;
+  .half-october-title {
+    font-size: 28px;
+    font-weight: 900;
+    letter-spacing: -0.5px;
+    margin-bottom: 6px;
   }
 
-  footer p {
+  .half-october-title .ho-half { color: #fff; }
+  .half-october-title .ho-october { color: var(--amber); }
+
+  .half-october-sub {
+    font-size: 14px;
+    color: var(--subtext);
+  }
+
+  /* STATS */
+  .stats {
+    padding: 80px 24px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+
+  .stat-card {
+    background: var(--card);
+    border: 0.5px solid rgba(255,255,255,0.08);
+    border-radius: 16px;
+    padding: 24px;
+    text-align: center;
+  }
+
+  .stat-val {
+    font-size: 36px;
+    font-weight: 900;
+    letter-spacing: -1px;
+    margin-bottom: 4px;
+  }
+
+  .stat-lbl {
     font-size: 13px;
-    color: rgba(255,255,255,0.4);
-    margin: 0;
+    color: var(--subtext);
+    line-height: 1.4;
   }
 
-  @media (max-width: 480px) {
-    .page-title { font-size: 26px; }
-    .rights-grid { grid-template-columns: 1fr; }
-    .data-table { font-size: 13px; }
-    .data-table td, .data-table th { padding: 8px 12px; }
+  /* FEATURES */
+  .features {
+    padding: 80px 24px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .section-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    color: var(--green);
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    text-align: center;
+  }
+
+  .section-title {
+    font-size: clamp(28px, 5vw, 42px);
+    font-weight: 900;
+    letter-spacing: -1px;
+    text-align: center;
+    margin-bottom: 48px;
+    line-height: 1.1;
+  }
+
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .feature-card {
+    background: var(--card);
+    border: 0.5px solid rgba(255,255,255,0.08);
+    border-radius: 16px;
+    padding: 24px;
+    transition: border-color 0.2s;
+  }
+  .feature-card:hover {
+    border-color: rgba(29,158,117,0.3);
+  }
+
+  .feature-emoji {
+    font-size: 28px;
+    margin-bottom: 12px;
+    display: block;
+  }
+
+  .feature-title {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 6px;
+  }
+
+  .feature-desc {
+    font-size: 14px;
+    color: var(--subtext);
+    line-height: 1.6;
+  }
+
+  /* PINT SECTION */
+  .pint-section {
+    padding: 80px 24px;
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .pint-card {
+    background: #FFF4DE;
+    border-radius: 20px;
+    padding: 32px;
+    margin-bottom: 32px;
+  }
+
+  .pint-avatar {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #EF9F27, #E05C4B);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    margin: 0 auto 16px;
+  }
+
+  .pint-name {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: #EF9F27;
+    margin-bottom: 12px;
+  }
+
+  .pint-quote {
+    font-size: 18px;
+    font-style: italic;
+    color: #1a1a18;
+    line-height: 1.6;
+    font-weight: 500;
+  }
+
+  /* CTA SECTION */
+  .cta-section {
+    padding: 80px 24px 120px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cta-title {
+    font-size: clamp(32px, 6vw, 56px);
+    font-weight: 900;
+    letter-spacing: -1.5px;
+    margin-bottom: 16px;
+    line-height: 1.05;
+  }
+
+  .cta-sub {
+    font-size: 18px;
+    color: var(--subtext);
+    margin-bottom: 40px;
+  }
+
+  /* FOOTER */
+  footer {
+    border-top: 0.5px solid rgba(255,255,255,0.06);
+    padding: 32px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .footer-left {
+    font-size: 13px;
+    color: var(--subtext);
+  }
+
+  .footer-links {
+    display: flex;
+    gap: 24px;
+  }
+
+  .footer-links a {
+    font-size: 13px;
+    color: var(--subtext);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .footer-links a:hover { color: #fff; }
+
+  /* RESPONSIVE */
+  @media (max-width: 640px) {
+    nav { padding: 16px 20px; }
+    .stats-grid { grid-template-columns: 1fr; }
+    .features-grid { grid-template-columns: 1fr; }
+    footer {
+      flex-direction: column;
+      text-align: center;
+      padding: 24px 20px;
+    }
+    .footer-links { justify-content: center; }
+  }
+
+  /* ANIMATIONS */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .hero > * {
+    animation: fadeUp 0.6s ease forwards;
+  }
+  .hero-icon { animation-delay: 0.1s; opacity: 0; }
+  .hero-eyebrow { animation-delay: 0.2s; opacity: 0; }
+  .hero-title { animation-delay: 0.3s; opacity: 0; }
+  .hero-sub { animation-delay: 0.4s; opacity: 0; }
+  .hero-actions { animation-delay: 0.5s; opacity: 0; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .hero > * { animation: none; opacity: 1; }
   }
 </style>
 </head>
 <body>
 
-<header>
-  <div class="inner">
-    <div class="logo">Half<span>Pint</span></div>
-    <div class="tagline">by Grain</div>
+<!-- NAV -->
+<nav>
+  <div class="wordmark">
+    <span class="half">Half</span><span class="pint">Pint</span>
   </div>
-</header>
+  <a href="#download" class="nav-cta">Download ↓</a>
+</nav>
 
-<div class="container">
+<!-- HERO -->
+<section class="hero">
+  <!-- Ripple background -->
+  <svg class="hero-ripple" width="800" height="800" viewBox="0 0 800 800" fill="none" opacity="0.06">
+    <circle cx="400" cy="400" r="350" stroke="#1D9E75" stroke-width="1.5"/>
+    <circle cx="400" cy="400" r="270" stroke="#EF9F27" stroke-width="1.5"/>
+    <circle cx="400" cy="400" r="190" stroke="#8B5CF6" stroke-width="1.5"/>
+    <circle cx="400" cy="400" r="110" stroke="#1D9E75" stroke-width="1.5"/>
+  </svg>
 
-  <h1 class="page-title">Privacy Policy</h1>
-  <p class="last-updated">Last updated: July 2026</p>
+  <!-- App icon -->
+  <svg class="hero-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+    <rect width="100" height="100" fill="#1a1a18" rx="22"/>
+    <circle cx="50" cy="50" r="42" fill="none" stroke="#1D9E75" stroke-width="5" opacity="0.45"/>
+    <circle cx="50" cy="50" r="29" fill="none" stroke="#EF9F27" stroke-width="6" opacity="0.65"/>
+    <circle cx="50" cy="50" r="17" fill="none" stroke="#8B5CF6" stroke-width="4" opacity="0.5"/>
+    <clipPath id="half"><rect x="0" y="50" width="100" height="50"/></clipPath>
+    <circle cx="50" cy="50" r="17" fill="#1D9E75" clip-path="url(#half)"/>
+  </svg>
 
-  <div class="pint-note">
-    <div class="pint-label">🍺 Pint says</div>
-    <p>"We built HalfPint to help you drink less and gain more. Your data helps us do that — nothing else. We don't sell it, we don't show ads, and we never will. That's not a legal formality. It's how we're built."</p>
+  <div class="hero-eyebrow">Half October · Oct 1, 2026</div>
+
+  <h1 class="hero-title">
+    Cut back.<br>
+    <span class="accent">Don't quit.</span>
+  </h1>
+
+  <p class="hero-sub">
+    The drinking app that never judges you.
+    Track your gains, build your streak, and
+    meet Pint — your bartender, not your therapist.
+  </p>
+
+  <div class="hero-actions" id="download">
+    <a href="https://apps.apple.com/app/halfpint" class="btn-primary">
+      <svg width="18" height="18" viewBox="0 0 814 1000" fill="#1a1a18">
+        <path d="M788.1 340.9c-5.8 4.5-108.2 62.2-108.2 190.5 0 148.4 130.3 200.9 134.2 202.2-.6 3.2-20.7 71.9-68.7 141.9-42.8 61.6-87.5 123.1-155.5 123.1s-85.5-39.5-164-39.5c-76.5 0-103.7 40.8-165.9 40.8s-105-42.5-155.5-127.2C46.7 790.7 0 663 0 541.8c0-207.5 135.4-317.3 269-317.3 70.6 0 129.5 45.8 173.8 45.8 42.5 0 109.2-48.8 190.5-48.8zm-72.1-237.2c34.5-40.8 60.5-97.3 60.5-153.8 0-8.3-.6-16.7-2.6-24.4C714.5 1.9 641 33.5 592 82.1c-31.6 33.5-61.9 89.3-61.9 147.4 0 9 1.3 18 2.6 20.7 3.2.6 8.3 1.3 13.5 1.3 58 0 126.1-30.9 161.8-47.8z"/>
+      </svg>
+      Download on App Store
+    </a>
+    <a href="#halfoctober" class="btn-secondary">
+      What is Half October? →
+    </a>
   </div>
+</section>
 
-  <section>
-    <h2>Who we are</h2>
-    <p>HalfPint is a drinking moderation app built by Arun Sankar, trading as Grain ("we", "us", "our"). HalfPint helps you track your drinking habits, understand your patterns, and cut back — on your own terms.</p>
-    <p>You can reach us at: <a href="mailto:arunsankar.apps@gmail.com" style="color:#1D9E75;font-weight:500;">arunsankar.apps@gmail.com</a></p>
-  </section>
-
-  <section>
-    <h2>What we collect</h2>
-    <p>We only collect what we need to make HalfPint work for you.</p>
-
-    <table class="data-table">
-      <thead>
-        <tr>
-          <th>Data</th>
-          <th>Why we collect it</th>
-          <th>Stored where</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><strong>Email address</strong></td>
-          <td>Account creation and sign-in</td>
-          <td><span class="badge badge-amber">Supabase (secure)</span></td>
-        </tr>
-        <tr>
-          <td><strong>Tab name</strong></td>
-          <td>Personalising Pint's voice</td>
-          <td><span class="badge badge-amber">Supabase (secure)</span></td>
-        </tr>
-        <tr>
-          <td><strong>Drink logs</strong></td>
-          <td>Tracking your progress and calculating gains</td>
-          <td><span class="badge badge-amber">Supabase (secure)</span></td>
-        </tr>
-        <tr>
-          <td><strong>Mood logs</strong></td>
-          <td>Morning mood check-ins and pattern insights</td>
-          <td><span class="badge badge-amber">Supabase (secure)</span></td>
-        </tr>
-        <tr>
-          <td><strong>Drinking preferences</strong></td>
-          <td>Calculating savings and setting your goals</td>
-          <td><span class="badge badge-amber">Supabase (secure)</span></td>
-        </tr>
-        <tr>
-          <td><strong>Subscription status</strong></td>
-          <td>Managing your Pro or Premium access</td>
-          <td><span class="badge badge-amber">RevenueCat (secure)</span></td>
-        </tr>
-        <tr>
-          <td><strong>Local-only data</strong> <em>(no account users)</em></td>
-          <td>All the above, stored only on your device</td>
-          <td><span class="badge badge-green">Your device only</span></td>
-        </tr>
-      </tbody>
-    </table>
-  </section>
-
-  <section>
-    <h2>What we never do</h2>
-
-    <div class="highlight-box">
-      <p>✅ We never sell your data. We never show ads. We never share your drinking data with third parties. Ever.</p>
+<!-- HALF OCTOBER -->
+<div style="padding: 0 24px;" id="halfoctober">
+  <div class="half-october">
+    <div class="half-october-label">The movement · Oct 1, 2026</div>
+    <div class="half-october-title">
+      <span class="ho-half">Half</span><span class="ho-october">October.</span>
     </div>
-
-    <ul>
-      <li>We do not sell your personal data to anyone</li>
-      <li>We do not show advertisements</li>
-      <li>We do not share your drinking habits with employers, insurers, or any third party</li>
-      <li>We do not use your data to build advertising profiles</li>
-      <li>We do not track you across other apps or websites</li>
-      <li>We do not use your location</li>
-      <li>We do not access your contacts, photos, or any other device data</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>How we use your data</h2>
-    <p>Your data is used exclusively to:</p>
-    <ul>
-      <li>Show you your drinking patterns, streaks, and savings</li>
-      <li>Personalise Pint's messages and insights</li>
-      <li>Calculate your money saved, calories saved, and life minutes gained</li>
-      <li>Send you optional push notifications (only if you enable them)</li>
-      <li>Process your subscription through Apple's App Store</li>
-      <li>Sync your data across your devices (account users only)</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>Third-party services</h2>
-    <p>We use a small number of trusted services to run HalfPint:</p>
-
-    <table class="data-table">
-      <thead>
-        <tr>
-          <th>Service</th>
-          <th>Purpose</th>
-          <th>Their privacy policy</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><strong>Supabase</strong></td>
-          <td>Secure database and authentication</td>
-          <td><a href="https://supabase.com/privacy" style="color:#1D9E75;">supabase.com/privacy</a></td>
-        </tr>
-        <tr>
-          <td><strong>RevenueCat</strong></td>
-          <td>Subscription and purchase management</td>
-          <td><a href="https://www.revenuecat.com/privacy" style="color:#1D9E75;">revenuecat.com/privacy</a></td>
-        </tr>
-        <tr>
-          <td><strong>Apple App Store</strong></td>
-          <td>App distribution and in-app purchases</td>
-          <td><a href="https://www.apple.com/legal/privacy/" style="color:#1D9E75;">apple.com/legal/privacy</a></td>
-        </tr>
-      </tbody>
-    </table>
-
-    <p>None of these services receive your drinking data or mood data. They only receive what is strictly necessary to perform their function (e.g. RevenueCat receives your subscription status, not your drink logs).</p>
-  </section>
-
-  <section>
-    <h2>Your rights</h2>
-    <p>You have full control over your data.</p>
-
-    <div class="rights-grid">
-      <div class="right-item">
-        <div class="right-title">Access your data</div>
-        <p class="right-desc">Export all your data as a CSV from Settings → Privacy & Data → Export my data (Pro feature)</p>
-      </div>
-      <div class="right-item">
-        <div class="right-title">Delete your data</div>
-        <p class="right-desc">Delete your account and all associated data from Settings → Delete account. Permanent and immediate.</p>
-      </div>
-      <div class="right-item">
-        <div class="right-title">Correct your data</div>
-        <p class="right-desc">Edit your profile, preferences, and logged data directly within the app at any time.</p>
-      </div>
-      <div class="right-item">
-        <div class="right-title">Use without an account</div>
-        <p class="right-desc">Use HalfPint entirely locally — no account, no cloud storage. Your data never leaves your device.</p>
-      </div>
-      <div class="right-item">
-        <div class="right-title">Withdraw consent</div>
-        <p class="right-desc">Delete your account at any time. No questions asked. No retention period beyond what's legally required.</p>
-      </div>
-      <div class="right-item">
-        <div class="right-title">Data portability</div>
-        <p class="right-desc">Export your data in CSV format to take it wherever you like.</p>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <h2>Data retention</h2>
-    <p>We keep your data for as long as your account is active. When you delete your account:</p>
-    <ul>
-      <li>All drink logs are permanently deleted immediately</li>
-      <li>Your profile is permanently deleted immediately</li>
-      <li>Your authentication record is permanently deleted immediately</li>
-      <li>Subscription records are retained by Apple and RevenueCat per their own policies (for legal and financial compliance)</li>
-    </ul>
-    <p>We do not retain your personal data after account deletion.</p>
-  </section>
-
-  <section>
-    <h2>Children</h2>
-    <p>HalfPint is a drinking moderation app intended for adults aged 18 and over (or the legal drinking age in your country, whichever is higher). We do not knowingly collect data from minors. If you believe a minor has created an account, please contact us and we will delete it immediately.</p>
-  </section>
-
-  <section>
-    <h2>Security</h2>
-    <p>Your data is stored securely using industry-standard encryption (HTTPS/TLS in transit, encrypted at rest via Supabase). We use Row Level Security (RLS) to ensure your data is only accessible to you. No HalfPint employee can read your drink logs or mood data.</p>
-  </section>
-
-  <section>
-    <h2>Changes to this policy</h2>
-    <p>If we make significant changes to this privacy policy, we will notify you via the app before the changes take effect. The "last updated" date at the top of this page will always reflect the most recent version.</p>
-    <p>Continuing to use HalfPint after changes take effect means you accept the updated policy.</p>
-  </section>
-
-  <section>
-    <h2>Contact and grievances</h2>
-    <p>For any privacy questions, data requests, or concerns:</p>
-
-    <div class="contact-card">
-      <div class="name">Arun Sankar</div>
-      <div class="role">Data Controller · HalfPint by Grain</div>
-      <a href="mailto:arunsankar.apps@gmail.com">arunsankar.apps@gmail.com</a>
-    </div>
-
-    <p style="margin-top:16px;">We aim to respond to all privacy requests within 30 days. For Indian users, this also serves as the Grievance Officer contact under the Digital Personal Data Protection Act 2023.</p>
-  </section>
-
-  <section>
-    <h2>Support</h2>
-    <p>For app support, feature requests, or bug reports, contact us at the same address: <a href="mailto:arunsankar.apps@gmail.com" style="color:#1D9E75;font-weight:500;">arunsankar.apps@gmail.com</a></p>
-    <p>We typically respond within 48 hours.</p>
-  </section>
-
+    <p class="half-october-sub">
+      Not Dry October. Not quitting. Just half.<br>
+      The challenge you'll actually finish. <strong style="color:#EF9F27;">#HalfOctober</strong>
+    </p>
+  </div>
 </div>
 
+<!-- STATS -->
+<section class="stats">
+  <div class="stats-grid">
+    <div class="stat-card">
+      <div class="stat-val" style="color:var(--green);">97%</div>
+      <div class="stat-lbl">of Dry October<br>attempts fail by week 2</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-val" style="color:var(--amber);">₹38,400</div>
+      <div class="stat-lbl">average urban Indian spends<br>on drinks per year</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-val" style="color:var(--purple);">47 days</div>
+      <div class="stat-lbl">of life regained by cutting<br>back by half per year</div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="features">
+  <div class="section-label">What's inside</div>
+  <h2 class="section-title">Everything you gain<br>when you drink less.</h2>
+
+  <div class="features-grid">
+    <div class="feature-card">
+      <span class="feature-emoji">💰</span>
+      <div class="feature-title">Real savings, real time</div>
+      <p class="feature-desc">See exactly how much you're saving in money and minutes with every drink you skip. Gains-first, not guilt-first.</p>
+    </div>
+    <div class="feature-card">
+      <span class="feature-emoji">🔥</span>
+      <div class="feature-title">Streak engine</div>
+      <p class="feature-desc">Build a logging streak with freeze protection. One bad night doesn't reset everything you've built.</p>
+    </div>
+    <div class="feature-card">
+      <span class="feature-emoji">🌙</span>
+      <div class="feature-title">Dry night tracking</div>
+      <p class="feature-desc">Log dry nights and see what you did with the time and money. Saved for a trip? Stayed up late reading? It counts.</p>
+    </div>
+    <div class="feature-card">
+      <span class="feature-emoji">📊</span>
+      <div class="feature-title">Full analytics</div>
+      <p class="feature-desc">Weekly patterns, mood history, drink types, and savings momentum. See the shape of your drinking — and your progress.</p>
+    </div>
+    <div class="feature-card">
+      <span class="feature-emoji">🤝</span>
+      <div class="feature-title">Invite a friend</div>
+      <p class="feature-desc">Share your invite code. You both get a streak freeze. A friend who cuts back together is a friend worth keeping.</p>
+    </div>
+    <div class="feature-card">
+      <span class="feature-emoji">🍺</span>
+      <div class="feature-title">Meet Pint</div>
+      <p class="feature-desc">Your bartender, not your therapist. He tracks your tab, shows you the savings, and never lectures you for a big night.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PINT SECTION -->
+<section class="pint-section">
+  <div class="section-label">Pint says</div>
+  <h2 class="section-title" style="margin-bottom:32px;">A bartender who's<br>seen it all.</h2>
+
+  <div class="pint-card">
+    <div class="pint-avatar">🍺</div>
+    <div class="pint-name">PINT SAYS</div>
+    <p class="pint-quote">"Dry October has a 97% failure rate. Not because people lack willpower. Because quitting entirely is the wrong goal. Cutting back by half? That's something humans can actually do."</p>
+  </div>
+
+  <p style="font-size:15px;color:var(--subtext);line-height:1.7;">
+    Pint is warm, dry, and never preachy. He keeps tabs on your tab, slides you water without being asked, and has your back on big nights. No lectures. No guilt. Just honest numbers and a quiet word when it counts.
+  </p>
+</section>
+
+<!-- FINAL CTA -->
+<section class="cta-section">
+  <div style="position:relative;z-index:2;">
+    <div class="section-label">Download HalfPint</div>
+    <h2 class="cta-title">
+      Small changes.<br>
+      <span style="color:var(--green);">Wide ripples.</span>
+    </h2>
+    <p class="cta-sub">Free to download. No judgment included.</p>
+    <a href="https://apps.apple.com/app/halfpint" class="btn-primary" style="display:inline-flex;margin:0 auto;">
+      <svg width="18" height="18" viewBox="0 0 814 1000" fill="white">
+        <path d="M788.1 340.9c-5.8 4.5-108.2 62.2-108.2 190.5 0 148.4 130.3 200.9 134.2 202.2-.6 3.2-20.7 71.9-68.7 141.9-42.8 61.6-87.5 123.1-155.5 123.1s-85.5-39.5-164-39.5c-76.5 0-103.7 40.8-165.9 40.8s-105-42.5-155.5-127.2C46.7 790.7 0 663 0 541.8c0-207.5 135.4-317.3 269-317.3 70.6 0 129.5 45.8 173.8 45.8 42.5 0 109.2-48.8 190.5-48.8zm-72.1-237.2c34.5-40.8 60.5-97.3 60.5-153.8 0-8.3-.6-16.7-2.6-24.4C714.5 1.9 641 33.5 592 82.1c-31.6 33.5-61.9 89.3-61.9 147.4 0 9 1.3 18 2.6 20.7 3.2.6 8.3 1.3 13.5 1.3 58 0 126.1-30.9 161.8-47.8z"/>
+      </svg>
+      Download on App Store
+    </a>
+    <p style="margin-top:20px;font-size:13px;color:var(--subtext);">
+      Available on iPhone · Half October starts Oct 1
+    </p>
+  </div>
+</section>
+
+<!-- FOOTER -->
 <footer>
-  <div class="footer-logo">Half<span>Pint</span></div>
-  <p>Small changes. Wide ripples.</p>
+  <div class="footer-left">
+    <div class="wordmark" style="font-size:16px;margin-bottom:4px;">
+      <span class="half">Half</span><span class="pint">Pint</span>
+    </div>
+    <div>© 2026 Grain Studio · Small changes. Wide ripples.</div>
+  </div>
+  <div class="footer-links">
+    <a href="https://arunsankar-dwbi.github.io/halfpintapp">Privacy Policy</a>
+    <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Terms of Use</a>
+    <a href="mailto:pint@gethalfpint.com">Contact</a>
+  </div>
 </footer>
 
 </body>
