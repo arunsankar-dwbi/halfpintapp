@@ -49,10 +49,8 @@
     padding-top: max(16px, env(safe-area-inset-top, 0px));
     padding-right: max(24px, env(safe-area-inset-right, 0px));
     padding-left: max(24px, env(safe-area-inset-left, 0px));
-    display: grid;
-    grid-template-columns: 1fr auto;
+    display: flex;
     align-items: center;
-    column-gap: 16px;
     background: rgba(26,26,24,0.85);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
@@ -63,26 +61,10 @@
     font-size: 20px;
     font-weight: 900;
     letter-spacing: -0.5px;
-    justify-self: start;
     min-width: 0;
   }
   .wordmark .half { color: #fff; }
   .wordmark .pint { color: var(--amber); }
-
-  .nav-cta {
-    justify-self: end;
-    flex-shrink: 0;
-    white-space: nowrap;
-    background: var(--green);
-    color: #fff;
-    font-size: 14px;
-    font-weight: 700;
-    padding: 10px 20px;
-    border-radius: 10px;
-    text-decoration: none;
-    transition: opacity 0.2s;
-  }
-  .nav-cta:hover { opacity: 0.85; }
 
   #download {
     scroll-margin-top: 96px;
@@ -508,10 +490,6 @@
       padding: 12px 16px;
       padding-top: max(12px, env(safe-area-inset-top, 0px));
     }
-    .nav-cta {
-      font-size: 13px;
-      padding: 8px 14px;
-    }
     .stats-grid { grid-template-columns: 1fr; }
     .features-grid { grid-template-columns: 1fr; }
     footer {
@@ -549,7 +527,6 @@
   <div class="wordmark">
     <span class="half">Half</span><span class="pint">Pint</span>
   </div>
-  <a href="#download" class="nav-cta">Download ↓</a>
 </nav>
 
 <!-- HERO -->
