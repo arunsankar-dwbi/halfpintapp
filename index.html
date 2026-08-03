@@ -21,7 +21,10 @@
 
   * { box-sizing: border-box; margin: 0; padding: 0; }
 
-  html { scroll-behavior: smooth; }
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 88px;
+  }
 
   body {
     background: var(--dark);
@@ -35,12 +38,21 @@
   /* NAV */
   nav {
     position: fixed;
-    top: 0; left: 0; right: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
     z-index: 100;
-    padding: 20px 40px;
-    display: flex;
+    padding: 16px 24px;
+    padding-top: max(16px, env(safe-area-inset-top, 0px));
+    padding-right: max(24px, env(safe-area-inset-right, 0px));
+    padding-left: max(24px, env(safe-area-inset-left, 0px));
+    display: grid;
+    grid-template-columns: 1fr auto;
     align-items: center;
-    justify-content: space-between;
+    column-gap: 16px;
     background: rgba(26,26,24,0.85);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
@@ -51,11 +63,16 @@
     font-size: 20px;
     font-weight: 900;
     letter-spacing: -0.5px;
+    justify-self: start;
+    min-width: 0;
   }
   .wordmark .half { color: #fff; }
   .wordmark .pint { color: var(--amber); }
 
   .nav-cta {
+    justify-self: end;
+    flex-shrink: 0;
+    white-space: nowrap;
     background: var(--green);
     color: #fff;
     font-size: 14px;
@@ -66,6 +83,10 @@
     transition: opacity 0.2s;
   }
   .nav-cta:hover { opacity: 0.85; }
+
+  #download {
+    scroll-margin-top: 96px;
+  }
 
   /* HERO */
   .hero {
@@ -483,7 +504,14 @@
 
   /* RESPONSIVE */
   @media (max-width: 640px) {
-    nav { padding: 16px 20px; }
+    nav {
+      padding: 12px 16px;
+      padding-top: max(12px, env(safe-area-inset-top, 0px));
+    }
+    .nav-cta {
+      font-size: 13px;
+      padding: 8px 14px;
+    }
     .stats-grid { grid-template-columns: 1fr; }
     .features-grid { grid-template-columns: 1fr; }
     footer {
@@ -491,7 +519,7 @@
       text-align: center;
       padding: 24px 20px;
     }
-    .footer-links { justify-content: center; }
+    .footer-links { justify-content: center; flex-wrap: wrap; }
   }
 
   /* ANIMATIONS */
