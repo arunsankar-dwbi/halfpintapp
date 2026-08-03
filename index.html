@@ -616,18 +616,12 @@
   </div>
 </footer>
 
-<!-- KO-FI WIDGET -->
-<script type='text/javascript'>
-  function loadKofi() {
-    var script = document.createElement('script');
-    script.src = 'https://storage.ko-fi.com/cdn/widget/Widget_2.js';
-    script.onload = function() {
-      kofiwidget2.init('Buy Pint a HalfPint', '#EF9F27', 'W0E724DVCI');
-      kofiwidget2.draw();
-    };
-    document.body.appendChild(script);
-  }
-  window.addEventListener('load', loadKofi);
+<!-- KO-FI WIDGET — must run during parse (not on window.load).
+     draw() uses document.write; after load that wipes the page. -->
+<script type="text/javascript" src="https://storage.ko-fi.com/cdn/widget/Widget_2.js"></script>
+<script type="text/javascript">
+  kofiwidget2.init('Buy Pint a HalfPint', '#EF9F27', 'W0E724DVCI');
+  kofiwidget2.draw();
 </script>
 </body>
 </html>
